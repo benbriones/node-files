@@ -20,8 +20,8 @@ async function cat(path) {
 /** Logs the content of a website */
 async function webCat(path) {
   try {
-    let urlPromise = await fetch(`${path}`);
-    const promiseData = await urlPromise.text();
+    let urlPromise = await fetch(`${path}`); // change to response
+    const promiseData = await urlPromise.text(); //
     console.log(promiseData);
   } catch (err) {
     console.log("error! error code=", err.code);
